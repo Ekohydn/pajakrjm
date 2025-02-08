@@ -1,0 +1,59 @@
+<!DOCTYPE html> <html lang="id">
+<html>
+<head>
+	<title>Dashboard</title>
+	<style>
+		/* tambahkan style untuk menu */
+		.menu {
+			background-color: #e0dd21;
+			padding: 10px;
+			border-bottom: 1px solid #3d3fc9;
+		}
+		.menu ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		.menu a {
+			text-decoration: none;
+			color: #337ab7;
+		}
+	</style>
+</head>
+<body>
+	<h1>Selamat Datang di Dashboard!</h1>
+	<div class="menu">
+		<ul>
+			<li><a href="dasbor.html">Dasbor</a></li>
+			<li><a href="profil.html">Profil</a></li>
+			<li><a href="pengaturan.html">Pengaturan</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+		</ul>
+	</div>
+    <script>
+		function logout() {
+			// menghapus session atau cookie
+			localStorage.removeItem('username');
+			localStorage.removeItem('password');
+			
+			// mengarah ke halaman login
+			window.location.href = 'index.html';
+		}
+	</script>
+</body>
+
+	<title>Dasbor</title>
+</head>
+<body>
+	<h1>Dasbor</h1>
+	<ul>
+		<li><a href="https://drive.google.com/file/d/FILE_ID_1/view" target="_blank">Dokumen 1</a></li>
+		<li><a href="https://drive.google.com/file/d/FILE_ID_2/view" target="_blank">Dokumen 2</a></li>
+		<li><a href="https://drive.google.com/file/d/FILE_ID_3/view" target="_blank">Dokumen 3</a></li>
+	</ul>
+</body>
+</html>

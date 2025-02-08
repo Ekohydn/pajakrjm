@@ -1,0 +1,50 @@
+<!DOCTYPE html> <html lang="id">
+<html>
+<head>
+	<title>Home</title>
+	<style>
+		/* tambahkan style untuk menu */
+		.menu {
+			background-color: #f0f0f0;
+			padding: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+		.menu ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		.menu a {
+			text-decoration: none;
+			color: #337ab7;
+		}
+	</style>
+</head>
+<body>
+	<h1>Selamat Datang di Halaman Home!</h1>
+
+	<div class="menu">
+		<ul>
+			<li><a href="dasbor.html">Dashboard</a></li>
+			<li><a href="profil.html">Profil</a></li>
+			<li><a href="#">Pengaturan</a></li>
+			<li><a href="#" onclick="logout()">Logout</a></li>
+		</ul>
+	</div>
+	
+	<script>
+		function logout() {
+			// menghapus session atau cookie
+			localStorage.removeItem('username');
+			localStorage.removeItem('password');
+			
+			// mengarah ke halaman login
+			window.location.href = 'index.html';
+		}
+	</script>
+</body>
+</html>
